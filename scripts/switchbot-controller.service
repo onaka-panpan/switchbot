@@ -5,10 +5,10 @@ Wants=network-online.target
 
 [Service]
 Type=simple
-User=t-tsukahara
-WorkingDirectory=/home/t-tsukahara/switchbot-controller
-EnvironmentFile=/home/t-tsukahara/switchbot-controller/.env
-ExecStart=/home/t-tsukahara/switchbot-controller/venv/bin/uvicorn backend.main:app --host 0.0.0.0 --port 8000
+User=pi
+WorkingDirectory=/home/pi/switchbot-controller
+EnvironmentFile=/home/pi/switchbot-controller/.env
+ExecStart=/home/pi/switchbot-controller/venv/bin/uvicorn backend.main:app --host 0.0.0.0 --port 8000
 Restart=always
 RestartSec=5
 
